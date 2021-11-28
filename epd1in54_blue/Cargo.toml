@@ -6,14 +6,16 @@ edition = "2018"
 
 [dependencies]
 
-epd-waveshare = { path = "../../", default-features = false, features = ["epd1in54"]}
+epd-waveshare = { git = "https://github.com/caemor/epd-waveshare", rev = "34a0d81b757edbb362a427a6429e74e5aea304ce"}
 
 #epd-waveshare = { path = "../../"}
 # 687496 -> 16868
 
 embedded-hal = { version = "0.2.2", features = ["unproven"] }
+embedded-graphics = "0.7"
 
-stm32f1xx-hal = { version = "0.2", features = ["rt", "stm32f103" ] }
-cortex-m = "0.5.0"
+stm32f1xx-hal = { version = "0.6", features = ["rt", "stm32f103" ] }
+cortex-m = "0.6.0"
 cortex-m-rt = { version = "0.6.6", features = ["device"] }
 panic-semihosting = "0.5"
+alloc-cortex-m = "0.4"
